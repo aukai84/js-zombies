@@ -138,7 +138,7 @@ class Player {
  */
 
 checkPack(){
-  this.getPack();
+  console.log(this.getPack());
 }
 
 
@@ -199,7 +199,7 @@ takeItem(item){
 discardItem(item){
   if(this._pack.indexOf(item) > -1){
     this._pack.splice(this._pack.indexOf(item), 1);
-    console.log(this.name + " discarded ${item}");
+    console.log(this.name+ ` discarded ${item.name}`);
     return true;
   } else {
     console.log("Cannot find item...nothing to discard");
@@ -259,6 +259,18 @@ equip(itemToEquip){
  * @name eat
  * @param {Food} itemToEat  The food item to eat.
  */
+
+eat(itemToEat){
+  if(itemToEat instanceof Food && this._pack.indexOf(itemToEat) > -1){
+    if((this.health + itemToEat.energy) >= this.getMaxHealth()){
+      this.health = this.getMaxHealth();
+      this._pack.splice(this._pack.indexOf(itemToEat), 1);
+    } else {
+      this.health += itemToEat.energy;
+      this._pack.splice(this._pack.indexOf(itemToEat), 1);
+    }
+  }
+}
 
 
 /**
