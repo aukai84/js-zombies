@@ -110,9 +110,11 @@ class Player {
     this.health = health;
     this.strength = strength;
     this.speed = speed;
+    this._pack = [];
+    this._maxHeallth = health;
+    this.isAlive = true;
+    this.equipped = false;
   }
-
-  pack
 }
 
 
