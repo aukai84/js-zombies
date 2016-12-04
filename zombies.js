@@ -308,6 +308,15 @@ useItem(item){
  * @return {string/boolean}   Weapon name or false if nothing is equipped.
  */
 
+equippedWith(){
+  this.checkPack();
+  if(this.equipped){
+  return this.equipped.name;
+} else if(this.equipped === false){
+  return false;
+  }
+}
+
 }
 /**
  * Class => Zombie(health, strength, speed)
