@@ -111,11 +111,18 @@ class Player {
     this.strength = strength;
     this.speed = speed;
     this._pack = [];
-    this._maxHeallth = health;
+    this._maxHealth = health;
     this.isAlive = true;
     this.equipped = false;
   }
-}
+
+  getPack(){
+    return this._pack;
+  }
+
+  getMaxHealth(){
+    return this._maxHealth;
+  }
 
 
 /**
@@ -129,6 +136,10 @@ class Player {
  *
  * @name checkPack
  */
+
+checkPack(){
+  this.getPack();
+}
 
 
 /**
@@ -149,6 +160,15 @@ class Player {
  * @return {boolean} true/false     Whether player was able to store item in pack.
  */
 
+takeItem(item){
+  if(this._pack.length < 3){
+    console.log(this.name + "'s ${item}");
+    this._pack.push(item);
+  } else {
+    console.log("Pack is full idiot");
+    return false;
+  }
+}
 
 /**
  * Player Class Method => discardItem(item)
@@ -246,7 +266,7 @@ class Player {
  * @return {string/boolean}   Weapon name or false if nothing is equipped.
  */
 
-
+}
 /**
  * Class => Zombie(health, strength, speed)
  * -----------------------------
