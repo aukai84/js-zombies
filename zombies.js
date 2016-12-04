@@ -227,6 +227,19 @@ discardItem(item){
  * @param {Weapon} itemToEquip  The weapon item to equip.
  */
 
+equip(itemToEquip){
+  if(this._pack.indexOf(itemToEquip) > -1 && itemToEquip instanceof Weapon){
+    if(this.equipped){
+      this.takeItem(this.equipped);
+      this.equipped = itemToEquip;
+      this._pack.splice(this._pack.indexOf(itemToEquip), 1);
+    } else if(this.equipped === false){
+      this.equipped = itemToEquip;
+      this.discardItem(itemToEquip);
+    }
+  }
+}
+
 
 /**
  * Player Class Method => eat(itemToEat)
