@@ -31,6 +31,7 @@ class Item {
  * @property {number} damage
  */
 
+ class Weapon {};
 
 /**
  * Weapon Extends Item Class

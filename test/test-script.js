@@ -34,5 +34,10 @@ describe("Weapon", () => {
 
   it("should be a class", () => {
     lightSaber.should.be.a.function
+  });
+
+  it("should have two parameters", () => {
+    lightSaber.name.to.exist;
+    lightSaber.damage.to.exist
   })
 });
