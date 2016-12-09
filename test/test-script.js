@@ -92,7 +92,10 @@ describe("Person", () => {
     aukai.should.have.property("strength", 1000)
     aukai.should.have.property("speed", 10000)
     Object.keys(aukai).length.should.equal(4)
-  })
+  });
+  it("should have a name", () => {
+    aukai.name.should.equal("Aukai")
+  });
 });
 
 
