@@ -231,8 +231,9 @@ equip(itemToEquip){
   if(this._pack.indexOf(itemToEquip) > -1 && itemToEquip instanceof Weapon){
     if(this.equipped){
       this.takeItem(this.equipped);
-      this.equipped = itemToEquip;
       this._pack.splice(this._pack.indexOf(itemToEquip), 1);
+      this.equipped = itemToEquip;
+
     } else if(this.equipped === false){
       this.equipped = itemToEquip;
       this.discardItem(itemToEquip);
@@ -311,8 +312,10 @@ useItem(item){
 equippedWith(){
   this.checkPack();
   if(this.equipped){
+    console.log(`${this.name} equipped ${this.equipped.name}`);
   return this.equipped.name;
-} else if(this.equipped === false){
+  } else if(this.equipped === false){
+    console.log("Nothing is equipped");
   return false;
   }
 }
