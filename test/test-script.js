@@ -69,6 +69,9 @@ describe("Food", () => {
   it("should have a name", () => {
     pizza.name.should.equal("Pizza")
   });
+  it("should be an instance of Item", () => {
+    pizza.should.be.an.instanceof(Item)
+  });
 });
 
 
