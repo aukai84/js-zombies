@@ -2,17 +2,19 @@
 const chai = require('chai');
 const Zombies = require('../zombies');
 chai.should();
+let Item = Zombies.item;
+let Weapon = Zombies.weapon;
+let Food = Zombies.food;
 
 describe("Item", () => {
 
-  let item = Zombies.item;
   let stick;
   beforeEach(() => {
-     stick = new item("stick");
+     stick = new Item("stick");
   });
 
   it("should be a class", () => {
-    item.should.be.a.function
+    Item.should.be.a.function
   });
 
   it("should have one parameter", () => {
@@ -25,14 +27,12 @@ describe("Item", () => {
 });
 
 describe("Weapon", () => {
-
-  let weapon = Zombies.weapon;
   let lightSaber;
   beforeEach(() => {
-    lightSaber = new weapon("Green Saber", 100);
+    lightSaber = new Weapon("Green Saber", 100);
   });
   it("should be a class", () => {
-    lightSaber.should.be.a.function
+    Weapon.should.be.a.function
   });
   it("should have parameters name and damage", () => {
     lightSaber.should.have.property.name
@@ -46,6 +46,10 @@ describe("Weapon", () => {
     lightSaber.damage.should.be.a("number");
   });
   it("Weapon should be an instance of Item", () => {
-    lightSaber.should.be.an.instanceof(Zombies.item)
- })
+    lightSaber.should.be.an.instanceof(Item)
+ });
 });
+
+
+
+
