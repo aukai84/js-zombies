@@ -5,6 +5,7 @@ chai.should();
 let Item = Zombies.item;
 let Weapon = Zombies.weapon;
 let Food = Zombies.food;
+let Person = Zombies.person;
 
 describe("Item", () => {
 
@@ -76,6 +77,8 @@ describe("Food", () => {
     Food.prototype.should.be.an.instanceof(Item)
   });
 });
+
+describe()
 
 
 

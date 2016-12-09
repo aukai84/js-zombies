@@ -381,5 +381,6 @@ function runGame() {
 module.exports = {
   item: Item,
   weapon: Weapon,
-  food: Food
+  food: Food,
+  person: Person
 };
