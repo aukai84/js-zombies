@@ -78,7 +78,15 @@ describe("Food", () => {
   });
 });
 
-describe()
+describe("Person", () => {
+  let aukai;
+  beforeEach(() => {
+    aukai = new Person("Aukai", 100, 1000, 10000);
+  });
+  it("should be a class", () => {
+    Person.should.be.a.funcion
+  });
+});
 
 
 
