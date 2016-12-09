@@ -57,7 +57,12 @@ describe("Food", () => {
   });
   it("should be a class", () => {
     Food.should.be.a.function
-  })
+  });
+  it("should have two parameters name and energy", () => {
+    pizza.should.have.property.name
+    pizza.should.have.property.energy
+    Object.keys(pizza).length.should.equal(2)
+  });
 });
 
 
