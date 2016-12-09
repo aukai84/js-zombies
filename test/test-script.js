@@ -66,6 +66,9 @@ describe("Food", () => {
     pizza.should.have.property("energy", 100)
     Object.keys(pizza).length.should.equal(2)
   });
+  it("should have a name", () => {
+    pizza.name.should.equal("Pizza")
+  });
 });
 
 
