@@ -29,15 +29,20 @@ describe("Weapon", () => {
   let weapon = Zombies.weapon;
   let lightSaber;
   beforeEach(() => {
-    lightSaber = new weapon("Green Saber");
+    lightSaber = new weapon("Green Saber", 100);
   });
 
   it("should be a class", () => {
     lightSaber.should.be.a.function
   });
 
-  it("should have two parameters", () => {
-    lightSaber.name.to.exist;
-    lightSaber.damage.to.exist
+  it("should have parameters name and damage", () => {
+    lightSaber.should.have.property.name
+    lightSaber.should.have.property.damage
+    Object.keys(lightSaber).length.should.equal(2)
+  });
+
+  it("should have a name", () => {
+    lightSaber.name.should.equal("Green Saber");
   })
 });
