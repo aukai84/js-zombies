@@ -61,6 +61,7 @@ class Item {
  * @property {number} energy
  */
 
+class Food {};
 
 /**
  * Food Extends Item Class

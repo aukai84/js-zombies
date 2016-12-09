@@ -56,7 +56,7 @@ describe("Food", () => {
     pizza = new Food("Pizza", 100);
   });
   it("should be a class", () => {
-    Food.shoulud.be.a.function
+    Food.should.be.a.function
   })
 });
 
