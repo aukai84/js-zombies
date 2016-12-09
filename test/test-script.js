@@ -118,6 +118,10 @@ describe("Player", () => {
     aukai.equipped.should.exist
     aukai.equipped.should.equal(false)
   });
+  it("should have method getPack which shows pack", () => {
+    aukai.getPack.should.exist
+    aukai.getPack.should.equal(_pack)
+  })
 });
 
 
