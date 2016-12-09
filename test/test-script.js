@@ -113,7 +113,11 @@ describe("Player", () => {
   it("should have property isAlive which is true", () => {
     aukai.isAlive.should.exist
     aukai.isAlive.should.equal(true)
-  })
+  });
+  it("should have equipped property which is false", () => {
+    aukai.equipped.should.exist
+    aukai.equipped.should.equal(false)
+  });
 });
 
 
