@@ -5,7 +5,7 @@ chai.should();
 let Item = Zombies.item;
 let Weapon = Zombies.weapon;
 let Food = Zombies.food;
-let Person = Zombies.person;
+let Player = Zombies.player;
 
 describe("Item", () => {
 
@@ -78,13 +78,13 @@ describe("Food", () => {
   });
 });
 
-describe("Person", () => {
+describe("Player", () => {
   let aukai;
   beforeEach(() => {
-    aukai = new Person("Aukai", 100, 1000, 10000);
+    aukai = new Player("Aukai", 100, 1000, 10000);
   });
   it("should be a class", () => {
-    Person.should.be.a.funcion
+    Player.should.be.a.funcion
   });
   it("should have 4 parameters, name, health, strengh, speed", () => {
     aukai.should.have.property("name")
@@ -96,6 +96,9 @@ describe("Person", () => {
   it("should have a name", () => {
     aukai.name.should.equal("Aukai")
   });
+  it("should have method takeItem", () => {
+    aukai.takeItem.should.exist
+  })
 });
 
 
