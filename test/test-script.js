@@ -86,19 +86,27 @@ describe("Player", () => {
   it("should be a class", () => {
     Player.should.be.a.funcion
   });
-  it("should have 4 parameters, name, health, strengh, speed", () => {
+  it("should have parameters, name, health, strengh, speed", () => {
     aukai.should.have.property("name")
     aukai.should.have.property("health", 100)
     aukai.should.have.property("strength", 1000)
     aukai.should.have.property("speed", 10000)
-    Object.keys(aukai).length.should.equal(4)
+    //Object.keys(aukai).length.should.equal(8)
   });
   it("should have a name", () => {
     aukai.name.should.equal("Aukai")
   });
   it("should have method checkPack", () => {
     aukai.checkPack.should.exist
-  })
+  });
+  it("should have prive pack property as array", () => {
+    aukai._pack.should.exist
+    aukai._pack.should.be.an("array")
+  });
+  it("should have private property maxHealth", () => {
+    aukai._maxHealth.should.exist
+    aukai._maxHealth.should.be.a("number")
+  });
 });
 
 

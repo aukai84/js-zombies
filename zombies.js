@@ -103,7 +103,11 @@ class Player {
     this.health = health;
     this.strength = strength;
     this.speed = speed;
+    this._pack = [];
+
   }
+
+
 
 
 
