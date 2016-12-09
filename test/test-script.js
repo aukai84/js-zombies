@@ -27,4 +27,12 @@ describe("Item", () => {
 describe("Weapon", () => {
 
   let weapon = Zombies.weapon;
-})
+  let lightSaber;
+  beforeEach(() => {
+    lightSaber = new weapon("Green Saber");
+  });
+
+  it("should be a class", () => {
+    lightSaber.should.be.a.function
+  })
+});
