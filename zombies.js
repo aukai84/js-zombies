@@ -61,7 +61,12 @@ class Item {
  * @property {number} energy
  */
 
-class Food {};
+class Food {
+  constructor(name, energy){
+    this.name = name;
+    this.energy = energy;
+  }
+};
 
 /**
  * Food Extends Item Class

@@ -35,8 +35,8 @@ describe("Weapon", () => {
     Weapon.should.be.a.function
   });
   it("should have parameters name and damage", () => {
-    lightSaber.should.have.property.name
-    lightSaber.should.have.property.damage
+    lightSaber.should.have.property("name")
+    lightSaber.should.have.property("damage", 100)
     Object.keys(lightSaber).length.should.equal(2)
   });
   it("should have a name", () => {
@@ -59,8 +59,8 @@ describe("Food", () => {
     Food.should.be.a.function
   });
   it("should have two parameters name and energy", () => {
-    pizza.should.have.property.name
-    pizza.should.have.property.energy
+    pizza.should.have.property("name")
+    pizza.should.have.property("energy", 100)
     Object.keys(pizza).length.should.equal(2)
   });
 });
