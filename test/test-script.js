@@ -72,6 +72,9 @@ describe("Food", () => {
   it("should be an instance of Item", () => {
     pizza.should.be.an.instanceof(Item)
   });
+  it("should extend the prototype of Item", () => {
+    Food.prototype.should.be.an.instanceof(Item)
+  });
 });
 
 
