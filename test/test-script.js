@@ -64,8 +64,11 @@ describe("Food", () => {
   });
   it("should have two parameters name and energy", () => {
     pizza.should.have.property("name")
-    pizza.should.have.property("energy", 100)
+    pizza.should.have.property("energy")
     Object.keys(pizza).length.should.equal(2)
+  });
+  it("energy should be a nubmer", () => {
+    pizza.energy.should.be.a("number")
   });
   it("should have a name", () => {
     pizza.name.should.equal("Pizza")
@@ -88,9 +91,9 @@ describe("Player", () => {
   });
   it("should have parameters, name, health, strengh, speed", () => {
     aukai.should.have.property("name")
-    aukai.should.have.property("health", 100)
-    aukai.should.have.property("strength", 1000)
-    aukai.should.have.property("speed", 10000)
+    aukai.should.have.property("health")
+    aukai.should.have.property("strength")
+    aukai.should.have.property("speed")
     //Object.keys(aukai).length.should.equal(8)
   });
   it("should have a name", () => {
@@ -107,6 +110,10 @@ describe("Player", () => {
     aukai._maxHealth.should.exist
     aukai._maxHealth.should.be.a("number")
   });
+  it("should have property isAlive which is true", () => {
+    aukai.isAlive.should.exist
+    aukai.isAlive.should.equal(true)
+  })
 });
 
 

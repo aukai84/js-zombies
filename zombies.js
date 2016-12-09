@@ -49,7 +49,7 @@ class Item {
  * Class => Food(name, energy)
  * -----------------------------
  * Creates a food item.
- * Food items give energy, restoring health to the player.
+ * Food items give energy, restoring health to the player. Set energy to 100
  *
  * The Food class constructor will call
  *   the super class (Item) constructor
