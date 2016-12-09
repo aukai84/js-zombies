@@ -50,6 +50,16 @@ describe("Weapon", () => {
  });
 });
 
+describe("Food", () => {
+  let pizza;
+  beforeEach(() => {
+    pizza = new Food("Pizza", 100);
+  });
+  it("should be a class", () => {
+    pizza.shoulud.be.a.function
+  })
+});
+
 
 
 
