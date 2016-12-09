@@ -104,7 +104,7 @@ class Player {
     this.strength = strength;
     this.speed = speed;
     this._pack = [];
-
+    this._maxHealth = health;
   }
 
 
