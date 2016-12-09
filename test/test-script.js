@@ -47,7 +47,10 @@ describe("Weapon", () => {
   });
   it("Weapon should be an instance of Item", () => {
     lightSaber.should.be.an.instanceof(Item)
- });
+  });
+  it("Weapon should extend Items prototype", () => {
+    Weapon.prototype.should.be.an.instanceof(Item)
+  });
 });
 
 describe("Food", () => {
