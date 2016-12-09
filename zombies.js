@@ -105,6 +105,7 @@ class Player {
     this.speed = speed;
     this._pack = [];
     this._maxHealth = health;
+    this.isAlive = true;
   }
 
 
