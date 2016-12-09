@@ -86,6 +86,13 @@ describe("Person", () => {
   it("should be a class", () => {
     Person.should.be.a.funcion
   });
+  it("should have 4 parameters, name, health, strengh, speed", () => {
+    aukai.should.have.property("name")
+    aukai.should.have.property("health", 100)
+    aukai.should.have.property("strength", 1000)
+    aukai.should.have.property("speed", 10000)
+    Object.keys(aukai).length.should.equal(4)
+  })
 });
 
 
