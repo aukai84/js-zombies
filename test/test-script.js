@@ -31,18 +31,21 @@ describe("Weapon", () => {
   beforeEach(() => {
     lightSaber = new weapon("Green Saber", 100);
   });
-
   it("should be a class", () => {
     lightSaber.should.be.a.function
   });
-
   it("should have parameters name and damage", () => {
     lightSaber.should.have.property.name
     lightSaber.should.have.property.damage
     Object.keys(lightSaber).length.should.equal(2)
   });
-
   it("should have a name", () => {
     lightSaber.name.should.equal("Green Saber");
-  })
+  });
+  it("damage should be a number", () => {
+    lightSaber.damage.should.be.a("number");
+  });
+  it("Weapon should be an instance of Item", () => {
+    lightSaber.should.be.an.instanceof(Zombies.item)
+ })
 });

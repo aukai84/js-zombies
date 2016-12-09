@@ -31,9 +31,9 @@ class Item {
  * @property {number} damage
  */
 
- class Weapon {
+ class Weapon extends Item {
   constructor(name, damage){
-    this.name = name;
+    super(name);
     this.damage = damage;
   }
  }
