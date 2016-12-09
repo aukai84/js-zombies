@@ -104,7 +104,8 @@ class Player {
     this.strength = strength;
     this.speed = speed;
   }
-};
+
+
 
 /**
  * Player Class Method => checkPack()
@@ -117,6 +118,10 @@ class Player {
  *
  * @name checkPack
  */
+
+checkPack(){
+  console.log(this.getPack());
+}
 
 
 /**
@@ -136,6 +141,7 @@ class Player {
  * @param {Item/Weapon/Food} item   The item to take.
  * @return {boolean} true/false     Whether player was able to store item in pack.
  */
+
 
 
 /**
@@ -250,7 +256,7 @@ class Player {
  * @property {number} speed
  * @property {boolean} isAlive      Default value should be `true`.
  */
-
+}
 
 /**
  * Class => FastZombie(health, strength, speed)

@@ -96,8 +96,8 @@ describe("Player", () => {
   it("should have a name", () => {
     aukai.name.should.equal("Aukai")
   });
-  it("should have method takeItem", () => {
-    aukai.takeItem.should.exist
+  it("should have method checkPack", () => {
+    aukai.checkPack.should.exist
   })
 });
 
