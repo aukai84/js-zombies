@@ -109,9 +109,10 @@ class Player {
     this.equipped = false;
     this.getPack = function(){
       return this._pack;
-      this.getMaxHealth = function(){};
     };
-
+    this.getMaxHealth = function(){
+      return this._maxHealth;
+    };
 
   }
 

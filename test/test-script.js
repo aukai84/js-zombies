@@ -127,7 +127,6 @@ describe("Player", () => {
     aukai.getMaxHealth.should.not.be.undefined
     aukai.getMaxHealth.should.be.a.function
     aukai.getMaxHealth().should.be.a("number")
-    aukai.getMaxHealth().should.equal(health)
   })
 });
 
