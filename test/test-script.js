@@ -119,9 +119,10 @@ describe("Player", () => {
     aukai.equipped.should.equal(false)
   });
   it("should have method getPack which shows pack", () => {
-    aukai.getPack.should.exist
-    aukai.getPack.should.equal(_pack)
-  })
+    aukai.getPack.should.not.be.undefined
+    aukai.getPack.should.be.a.funcion
+    aukai.getPack.should.have.returned("array")
+  });
 });
 
 

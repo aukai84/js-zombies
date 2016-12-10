@@ -107,6 +107,9 @@ class Player {
     this._maxHealth = health;
     this.isAlive = true;
     this.equipped = false;
+    this.getPack = function(){
+      return this._pack;
+    };
   }
 
 
