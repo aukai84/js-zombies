@@ -99,9 +99,6 @@ describe("Player", () => {
   it("should have a name", () => {
     aukai.name.should.equal("Aukai")
   });
-  it("should have method checkPack", () => {
-    aukai.checkPack.should.exist
-  });
   it("should have prive pack property as array", () => {
     aukai._pack.should.exist
     aukai._pack.should.be.an("array")
@@ -127,6 +124,11 @@ describe("Player", () => {
     aukai.getMaxHealth.should.not.be.undefined
     aukai.getMaxHealth.should.be.a.function
     aukai.getMaxHealth().should.be.a("number")
+    aukai.getMaxHealth().should.be.at.least(aukai.health)
+  })
+  it("should have a method checkPack which prints your pack", () => {
+    aukai.checkPack.should.not.be.undefined
+    aukai.checkPack.should.be.a.function
   })
 });
 
