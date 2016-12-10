@@ -120,9 +120,15 @@ describe("Player", () => {
   });
   it("should have method getPack which shows pack", () => {
     aukai.getPack.should.not.be.undefined
-    aukai.getPack.should.be.a.funcion
-    aukai.getPack.should.have.returned("array")
+    aukai.getPack.should.be.a.function
+    aukai.getPack().should.be.an("array")
   });
+  it("should have method getMaxHealth which shows health", () => {
+    aukai.getMaxHealth.should.not.be.undefined
+    aukai.getMaxHealth.should.be.a.function
+    aukai.getMaxHealth().should.be.a("number")
+    aukai.getMaxHealth().should.equal(health)
+  })
 });
 
 
