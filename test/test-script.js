@@ -125,10 +125,13 @@ describe("Player", () => {
     aukai.getMaxHealth.should.be.a.function
     aukai.getMaxHealth().should.be.a("number")
     aukai.getMaxHealth().should.be.at.least(aukai.health)
-  })
+  });
   it("should have a method checkPack which prints your pack", () => {
     aukai.checkPack.should.not.be.undefined
     aukai.checkPack.should.be.a.function
+  });
+  it("should have a method takeItem", () => {
+    aukai.takeItem.should.be.a.function
   })
 });
 
