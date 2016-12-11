@@ -155,6 +155,7 @@ checkPack(){
  * @return {boolean} true/false     Whether player was able to store item in pack.
  */
 
+takeItem(){};
 
 
 /**
